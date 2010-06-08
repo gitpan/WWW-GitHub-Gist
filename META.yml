@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               WWW-GitHub-Gist
-version:            0.01
+version:            0.02
 abstract:           Perl interface to Gist.GitHub.com
 author:
     - Alessandro Ghedini <alexbio@cpan.org>
@@ -11,7 +11,9 @@ configure_requires:
 build_requires:
     ExtUtils::MakeMaker:  0
 requires:
-    Test::More:  0
+    HTTP::Request::Common:  0
+    LWP::UserAgent:       0
+    Test::More:           0
 no_index:
     directory:
         - t
