@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               WWW-GitHub-Gist
-version:            0.04
+version:            0.05
 abstract:           Perl interface to Gist.GitHub.com
 author:
     - Alessandro Ghedini <alexbio@cpan.org>
