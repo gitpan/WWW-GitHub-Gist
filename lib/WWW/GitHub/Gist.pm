@@ -1,95 +1,167 @@
 package WWW::GitHub::Gist;
+BEGIN {
+  $WWW::GitHub::Gist::VERSION = '0.06';
+}
 
 use Carp;
-use LWP::UserAgent;
-use HTTP::Request::Common;
 use JSON;
+use HTTP::Tiny;
 
-use warnings;
 use strict;
+use warnings;
 
 =head1 NAME
 
-WWW::GitHub::Gist - Perl interface to Gist.GitHub.com
+WWW::GitHub::Gist - Perl interface to GitHub's Gist pastebin service
 
 =head1 VERSION
 
-Version 0.05
+version 0.06
 
 =cut
 
-our $VERSION = '0.05';
+use constant GIST_URL	=> 'http://gist.github.com';
+use constant API_URL	=> 'http://gist.github.com/api/v1';
+use constant API_FORMAT	=> 'json';
 
-my $GIST_URL   = 'http://gist.github.com';
-my $API_URL    = 'http://gist.github.com/api/v1';
-my $API_FORMAT = 'json';
+my $http = HTTP::Tiny -> new();
 
 =head1 SYNOPSIS
 
-WWW::GitHub::Gist is an object-oriented interface to Gist.GitHub.com.
+L<WWW::GitHub::Gist> is an object-oriented interface to the pastebin
+service of GitHub L<gist.github.com>.
 
+    use feature 'say';
     use WWW::GitHub::Gist;
 
-    my $gist = WWW::GitHub::Gist->new(id => 'gist id');
+    my $gist = WWW::GitHub::Gist -> new(id => 'gist id');
 
-    print $gist->info->{'user'}."\n";
+    # Print the gist's author
+    say $gist -> info -> {'owner'};
 
-    $gist = WWW::GitHub::Gist->new(user => 'username');
+    # Print every ID of the gists owned by USERNAME
+    $gist = WWW::GitHub::Gist -> new(user => 'USERNAME');
 
-    foreach (@{$gist->user}) {
-	    print $_->{'repo'}."\n";
+    foreach (@{ $gist -> user() }) {
+      say $_ -> {'repo'};
     }
 
-    $gist = WWW::GitHub::Gist->new(user => 'username', token => 'github token');
+    # Create a new gist and print its ID
+    my $login = `git config github.user`;
+    my $token = `git config github.token`;
 
-    $gist->add_file('test', 'some data here', '.txt');
-    $gist->create;
+    chomp $login; chomp $token;
+
+    $gist = WWW::GitHub::Gist -> new(
+      user  => $login,
+      token => $token
+    );
+
+    $gist -> add_file('test', 'some data here', '.txt');
+    say $gist -> create() -> {'repo'};
 
 =head1 METHODS
 
-=head2 new
+=head2 new( %args )
 
-Create a L<WWW::GitHub::Gist> object
+Create a L<WWW::GitHub::Gist> object. The C<%args> hash may contain the
+following fields:
+
+=over
+
+=item C<id>
+
+The ID of an existing gist.
+
+=item C<user>
+
+The name of a GitHub user.
+
+=item C<token>
+
+The GitHub token used for the login.
+
+=back
 
 =cut
 
 sub new {
 	my ($class, %args) = @_;
- 
+
 	my $self = bless({%args}, $class);
 
 	return $self;
 }
 
-=head2 info
+=head2 info()
 
-Retrieve information about current gist
+Returns an hash containing the following fields:
+
+=over
+
+=item C<owner>
+
+The author of the gist.
+
+=item C<created_at>
+
+The date of creation of the gist.
+
+=item C<repo>
+
+The ID of the gist, which identifies its repository.
+
+=item C<files>
+
+An array of the file names contained in the gist.
+
+=item C<public>
+
+Wheter the gist is public or not.
+
+=item C<description>
+
+The description of the gist.
+
+=back
 
 =cut
 
 sub info {
 	my $self = shift;
-	
-	my $url = "$API_URL/$API_FORMAT/".$self -> {'id'};
 
-	return request($url, 'GET') -> {'gists'} -> [0];
+	my $url		= API_URL.'/'.API_FORMAT.'/'.$self -> {'id'};
+	my $response	= $http -> get($url);
+
+	if ($response -> {'status'} != 200) {
+		croak 'Err: '.$response -> {'reason'};
+	}
+
+	my $info	= _parse_response($response -> {'content'});
+
+	return @{ $info -> {'gists'} }[0];
 }
 
 =head2 file( $filename )
 
-Retrieve a file of current gist.
+Retrieve the selected file content of the current gist.
 
 =cut
 
 sub file {
 	my ($self, $filename) = @_;
-	
-	my $url = "$GIST_URL/raw/".$self -> {'id'}."/$filename";
 
-	return get_request($url, 'GET');
+	my $url		= GIST_URL.'/raw/'.$self -> {'id'}."/$filename";
+	my $response	= $http -> get($url);
+
+	if ($response -> {'status'} != 200) {
+		croak 'Err: '.$response -> {'reason'};
+	}
+
+	return $response -> {'content'};
 }
 
-=head2 user
+=head2 user()
 
 Retrieve user's gists
 
@@ -97,10 +169,17 @@ Retrieve user's gists
 
 sub user {
 	my $self = shift;
-	
-	my $url = "$API_URL/$API_FORMAT/gists/".$self -> {'user'};
 
-	return request($url, 'GET') -> {'gists'};
+	my $url		= API_URL.'/'.API_FORMAT.'/gists/'.$self -> {'user'};
+	my $response	= $http -> get($url);
+
+	if ($response -> {'status'} != 200) {
+		croak 'Err: '.$response -> {'reason'};
+	}
+
+	my $info	= _parse_response($response -> {'content'});
+
+	return $info -> {'gists'};
 }
 
 =head2 add_file( $filename, $data, $extension )
@@ -112,117 +191,69 @@ Add a file to the current gist
 sub add_file {
 	my ($self, $filename, $data, $extension) = @_;
 
-	push @{$self -> {'files'}}, {'file_ext'      => $extension ? $extension : '.txt',
-				     'file_name'     => $filename,
-				     'file_contents' => $data};
+	push @{ $self -> {'files'} },
+		{
+			'file_ext'      => $extension ? $extension : '.txt',
+			'file_name'     => $filename,
+			'file_contents' => $data
+		};
 }
 
 =head2 create
 
-Create a gist using files added with add_file()
+Create a gist using files added with add_file() and returns its info
+in a hash. See C<info()> for more details.
 
 =cut
 
 sub create {
+	my @params;
 	my $self = shift;
 
-	my @request = ('login', $self -> {'user'},
-		       'token', $self -> {'token'}
-	              );
+	my $url		= API_URL.'/'.API_FORMAT.'/new';
+
+	my $login	= 'login='.$self -> {'user'};
+	my $token	= 'token='.$self -> {'token'};
+
+	push @params, $login, $token;
 
 	foreach my $file (@{$self -> {'files'}}) {
-		my $ext      = $file -> {'file_ext'};
-		my $filename = $file -> {'file_name'};
-		my $data     = $file -> {'file_contents'};
-		
-		push @request,  "file_ext[$filename]" 	   => $ext,
-				"file_name[$filename]"	   => $filename,
-				"file_contents[$filename]" => $data;
-	}
-	
-	my $url = "$API_URL/$API_FORMAT/new";
+		my $ext		= $file -> {'file_ext'};
+		my $filename	= $file -> {'file_name'};
+		my $data	= $file -> {'file_contents'};
 
-	return request($url, 'POST', \@request) -> {'gists'};
-}
-
-=head1 SUBROUTINES
-
-=head2 request( $url, $type, $request )
-
-Make an HTTP request and parse the response.
-
-=cut
-
-sub request {
-	my ($url, $type, $request) = @_;
-	my $response;
-
-	if ($type eq 'GET') {
-		$response = get_request($url);
-	} elsif ($type eq 'POST') {
-		$response = post_request($url, $request);
+		push @params,	"file_ext[$filename]=$ext",
+				"file_name[$filename]=$filename",
+				"file_contents[$filename]=$data";
 	}
 
-	my $data = parse_response($response);
+	my $response = $http -> request('POST', $url, {
+		content => join("&", @params),
+		headers => {'content-type' => 'application/x-www-form-urlencoded'}
+	});
 
-	return $data;
+	if ($response -> {'status'} != 200) {
+		croak 'Err: '.$response -> {'reason'};
+	}
+
+	my $info	= _parse_response($response -> {'content'});
+
+	return @{ $info -> {'gists'} }[0];
 }
 
-=head2 get_request( $url )
+=head1 INTERNAL SUBROUTINES
 
-Make a GET request.
-
-=cut
-
-sub get_request {
-	my $url = shift;
-	my $ua = LWP::UserAgent -> new;
-	$ua -> agent("");
-
-	my $response = $ua -> request(GET $url) -> as_string;
-
-	my $status = (split / /,(split /\n/, $response)[0])[1];
-
-	croak "ERROR: Server reported status $status" if $status != 200;
-
-	my @data = split('\n\n', $response);
-
-	return $data[1];
-}
-
-=head2 post_request( $url, %request )
-
-Make a POST request.
-
-=cut
-
-sub post_request {
-	my ($url, $request) = @_;
-	my $ua = LWP::UserAgent -> new;
-	$ua -> agent("");
-
-	my $response = $ua -> request(POST $url, $request) -> as_string;
-
-	my $status = (split / /,(split /\n/, $response)[0])[1];
-	
-	croak "ERROR: Server reported status $status" if $status != 200;
-
-	my @data = split('\n\n', $response);
-
-	return $data[1];
-}
-
-=head2 parse_response( $data )
+=head2 _parse_response( $data )
 
 Parse the response of an HTTP request.
 
 =cut
 
-sub parse_response {
+sub _parse_response {
 	my $data = shift;
-	
+
 	my $json_text = decode_json $data;
-	
+
 	return $json_text;
 }
 
@@ -376,11 +407,11 @@ L<http://search.cpan.org/dist/WWW-GitHub-Gist/>
 
 =head1 ACKNOWLEDGEMENTS
 
-Gist.GitHub.com APIs are incomplete so many features are not accessible.
+Gist.GitHub.com APIs are incomplete, so many features are not accessible.
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright 2010 Alessandro Ghedini.
+Copyright 2011 Alessandro Ghedini.
 
 This program is free software; you can redistribute it and/or modify it
 under the terms of either: the GNU General Public License as published

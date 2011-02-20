@@ -1,17 +1,155 @@
-commit 9c1682f55d9f4e7798c710ae3297418fab39d672
-Author: Alessandro Ghedini <al3xbio@gmail.com>
-Date:   Tue Jun 8 21:53:00 2010 +0200
+==============================
+9999-99-99 99:99:99 +0000 HEAD
+==============================
 
-    update prereq in Makefile.PL
+  commit ead2fb6f5548678c48256cd237c26db5fa8d8b63
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Sun Feb 20 18:15:35 2011 +0100
+  
+    bump version
 
-commit c4b1f4570fe1b0532eed2c16d722d9e88d9b60d7
-Author: Alessandro Ghedini <al3xbio@gmail.com>
-Date:   Sun Jun 6 20:50:59 2010 +0200
+  commit 7f8e853f473cca97697ecd57d4c310f7d4027d52
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Sun Feb 20 18:15:17 2011 +0100
+  
+    improve and update bin/gist
 
-    add supported languages in POD
+  commit 41309932b797405fe145d1a01fc8dab43bac86a8
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Sun Feb 20 18:08:10 2011 +0100
+  
+    create() returns only first gist
 
-commit 2125af3350b537f3be82f94fbf0ed394b504f9a1
-Author: Alessandro Ghedini <al3xbio@gmail.com>
-Date:   Sun Jun 6 20:49:28 2010 +0200
+  commit 759ffe79ef2e2b98c2c89108142e88fa30c93b66
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Sun Feb 20 17:47:20 2011 +0100
+  
+    use git general config for login info
 
-    first commit
+  commit 4fc405fec9458cca8beba14c10e50e90c99b115e
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Sun Feb 20 17:41:23 2011 +0100
+  
+    rename script/gist.pl -> bin/gist
+
+  commit 874af4c43adcb0fdc71bbccba788e6198d25e828
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Sun Feb 20 17:37:36 2011 +0100
+  
+    update documentation
+
+  commit a9f8f09ce98da936f42fbe0cfdc3e23e062435ce
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Sun Feb 20 17:15:01 2011 +0100
+  
+    use constant
+
+  commit ac85c8eb061084fd6b1e32ea92c47487dbe4cb61
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Sun Feb 20 17:09:55 2011 +0100
+  
+    remove useless cruft
+
+  commit a7e12e6d6056a2dde1223a2a23f207cc52f0c201
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Sun Feb 20 17:08:55 2011 +0100
+  
+    move create() to HTTP::Tiny
+
+  commit 2776c23c4d94c5d71191b3eebab713e8216722db
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Sun Feb 20 16:53:41 2011 +0100
+  
+    clean-up add_file() code
+
+  commit 48d7ed8d4b5c44968078b4c57d4de8d9b389548d
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Sun Feb 20 16:52:23 2011 +0100
+  
+    move user() to HTTP::Tiny
+
+  commit 8bdfcf5c4f4e72d929676ec47e4fb3d8ecdaadd7
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Sun Feb 20 16:50:08 2011 +0100
+  
+    move file() to HTTP::Tiny
+
+  commit 61a4379360c50b78ab70bd5806291b6018fbac9d
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Sun Feb 20 16:47:23 2011 +0100
+  
+    move info() to HTTP::Tiny
+
+  commit 0da13427c74e05688cf7c263acf1dd32eb0920c2
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Sun Feb 20 16:24:29 2011 +0100
+  
+    use dzil plugins for module version
+
+  commit c4431cb3533e29f30705bd830ea2185420023ea0
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Sun Feb 20 16:22:35 2011 +0100
+  
+    switch to Dist::Zilla 
+
+===============================
+2010-08-22 15:41:51 +0200 v0.05
+===============================
+
+  commit 2908b3081d144c45ebb9017c815885207a0c887d
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Sun Aug 22 15:41:51 2010 +0200
+  
+    fix wrong naming for gist.pl 
+
+===============================
+2010-08-22 15:33:15 +0200 v0.04
+===============================
+
+  commit e10703d548e04222afd4cc5e84488f47129256e4
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Sun Aug 22 15:33:15 2010 +0200
+  
+    add gist.pl in Makefile.PL
+
+  commit cb42b1020b7571821bf8127ddfa1412fb2b8c673
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Sun Aug 22 15:31:52 2010 +0200
+  
+    fix output
+
+  commit 1a95a2fd4d1ec37b0742c32d6345a621985d3bf4
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Sun Aug 22 15:13:14 2010 +0200
+  
+    add script/gist.pl 
+
+===============================
+2010-06-10 14:29:43 +0200 v0.03
+===============================
+
+  commit 585c6d68155741a42ebf6261445e7d97c3a3c0a3
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Thu Jun 10 14:29:43 2010 +0200
+  
+    fix compilation errors... I forgot some prereq 
+
+===============================
+2010-06-08 21:54:25 +0200 v0.02
+===============================
+
+  commit c56688138febf18019116dbda656ab66b9d801fe
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Tue Jun 8 21:54:25 2010 +0200
+  
+    update version
+
+  commit 9c1682f55d9f4e7798c710ae3297418fab39d672
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Tue Jun 8 21:53:00 2010 +0200
+  
+    update prereq in Makefile.PL 
+
+===================================
+End of changes in the last 365 days
+===================================
