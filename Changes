@@ -2,6 +2,76 @@
 9999-99-99 99:99:99 +0000 HEAD
 ==============================
 
+  commit 1c7febf11c6583a77e74445bee15dfb5f055d7c3
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Mon Mar 21 21:38:28 2011 +0100
+  
+    bump version
+
+  commit d1f108cb1f3c178f3258a43b05a54b745d4bd2b9
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Mon Mar 21 21:39:14 2011 +0100
+  
+    move ACKNOWLEDGEMENTS section up
+
+  commit 71591624c4d657229b471e0b3930f024294af119
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Mon Mar 21 21:34:05 2011 +0100
+  
+    move gist script to standalone App::gist
+
+  commit b042dbbf07c190dac970b54098ff467c055398a1
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Mon Mar 21 21:20:38 2011 +0100
+  
+    add more verbose usage hint
+
+  commit f7d2e1f1f5a620298a731c542d3009606acf98de
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Mon Mar 21 21:17:00 2011 +0100
+  
+    fix 'corrupt tree file' caused by not using basenames
+
+  commit 529496a6d5390fa8da18b342996777f430c56882
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Mon Mar 21 21:12:11 2011 +0100
+  
+    fix info message for automatic extension
+
+  commit 998039058177ac7f3524d0fe6f24176b7d879a22
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Mon Mar 21 21:09:45 2011 +0100
+  
+    fix script names in gist synopsis
+
+  commit 25fa12a374d1b990ea5d5b225c4d0941961f5c2c
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Thu Mar 17 19:49:01 2011 +0100
+  
+    purge cruft from docs
+
+  commit 89444d0a7499474460498ff41dd46e00b6e51db9
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Thu Mar 17 19:48:32 2011 +0100
+  
+    fix email address
+
+  commit 89650ea54301179a5119fb28ff085bf512bf9ac3
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Mon Mar 7 17:41:05 2011 +0100
+  
+    switch to @GitHub bundle
+
+  commit f8fb8d58d6d86ced0ea51ad3b07c139b71ced253
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Mon Feb 21 11:35:23 2011 +0100
+  
+    add GithubUpdate to dist.ini 
+
+===============================
+2011-02-20 18:55:03 +0100 v0.06
+===============================
+
   commit ead2fb6f5548678c48256cd237c26db5fa8d8b63
   Author: Alessandro Ghedini <al3xbio@gmail.com>
   Date:   Sun Feb 20 18:15:35 2011 +0100

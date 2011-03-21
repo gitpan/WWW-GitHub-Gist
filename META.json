@@ -4,7 +4,7 @@
       "Alessandro Ghedini <alexbio@cpan.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.200003, CPAN::Meta::Converter version 2.102400",
+   "generated_by" : "Dist::Zilla version 4.200003, CPAN::Meta::Converter version 2.110580",
    "license" : [
       "perl_5"
    ],
@@ -22,7 +22,6 @@
       "runtime" : {
          "requires" : {
             "Carp" : 0,
-            "File::Basename" : 0,
             "HTTP::Tiny" : 0,
             "JSON" : 0,
             "constant" : 0
@@ -36,14 +35,17 @@
    },
    "release_status" : "stable",
    "resources" : {
-      "homepage" : "http://search.cpan.org/dist/WWW-GitHub-Gist/",
+      "bugtracker" : {
+         "web" : "https://github.com/AlexBio/WWW-GitHub-Gist/issues"
+      },
+      "homepage" : "http://search.cpan.org/dist/WWW-GitHub-Gist",
       "repository" : {
          "type" : "git",
          "url" : "git://github.com/AlexBio/WWW-GitHub-Gist.git",
          "web" : "https://github.com/AlexBio/WWW-GitHub-Gist"
       }
    },
-   "version" : "0.06",
+   "version" : "0.07",
    "x_Dist_Zilla" : {
       "plugins" : [
          {
@@ -117,9 +119,14 @@
             "version" : "4.200003"
          },
          {
-            "class" : "Dist::Zilla::Plugin::MetaResources",
-            "name" : "MetaResources",
-            "version" : "4.200003"
+            "class" : "Dist::Zilla::Plugin::GitHub::Meta",
+            "name" : "@GitHub/GitHub::Meta",
+            "version" : "0.06"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::GitHub::Update",
+            "name" : "@GitHub/GitHub::Update",
+            "version" : "0.06"
          },
          {
             "class" : "Dist::Zilla::Plugin::MetaConfig",

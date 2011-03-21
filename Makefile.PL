@@ -18,19 +18,16 @@ my %WriteMakefileArgs = (
     'ExtUtils::MakeMaker' => '6.31'
   },
   'DISTNAME' => 'WWW-GitHub-Gist',
-  'EXE_FILES' => [
-    'bin/gist'
-  ],
+  'EXE_FILES' => [],
   'LICENSE' => 'perl',
   'NAME' => 'WWW::GitHub::Gist',
   'PREREQ_PM' => {
     'Carp' => '0',
-    'File::Basename' => '0',
     'HTTP::Tiny' => '0',
     'JSON' => '0',
     'constant' => '0'
   },
-  'VERSION' => '0.06',
+  'VERSION' => '0.07',
   'test' => {
     'TESTS' => 't/*.t'
   }

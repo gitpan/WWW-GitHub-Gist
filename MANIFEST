@@ -5,7 +5,6 @@ META.json
 META.yml
 Makefile.PL
 README
-bin/gist
 dist.ini
 lib/WWW/GitHub/Gist.pm
 t/00-load.t

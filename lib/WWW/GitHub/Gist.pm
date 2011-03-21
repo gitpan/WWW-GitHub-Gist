@@ -1,6 +1,6 @@
 package WWW::GitHub::Gist;
 BEGIN {
-  $WWW::GitHub::Gist::VERSION = '0.06';
+  $WWW::GitHub::Gist::VERSION = '0.07';
 }
 
 use Carp;
@@ -16,7 +16,7 @@ WWW::GitHub::Gist - Perl interface to GitHub's Gist pastebin service
 
 =head1 VERSION
 
-version 0.06
+version 0.07
 
 =cut
 
@@ -363,51 +363,16 @@ GitHub supports the following extensions/languages:
 	.ooc		ooc
 	.rst		reStructuredText
 
-=head1 AUTHOR
-
-Alessandro Ghedini, C<< <alexbio at cpan.org> >>
-
-=head1 BUGS
-
-Please report any bugs or feature requests to C<bug-www-github-gist at rt.cpan.org>, or through
-the web interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=WWW-GitHub-Gist>.  I will be notified, and then you'll
-automatically be notified of progress on your bug as I make changes.
-
-=head1 SUPPORT
-
-You can find documentation for this module with the perldoc command.
-
-    perldoc WWW::GitHub::Gist
-
-You can also look for information at:
-
-=over 4
-
-=item Git repository
-
-L<http://github.com/AlexBio/WWW-GitHub-Gist>
-
-=item * RT: CPAN's request tracker
-
-L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=WWW-GitHub-Gist>
-
-=item * AnnoCPAN: Annotated CPAN documentation
-
-L<http://annocpan.org/dist/WWW-GitHub-Gist>
-
-=item * CPAN Ratings
-
-L<http://cpanratings.perl.org/d/WWW-GitHub-Gist>
-
-=item * Search CPAN
-
-L<http://search.cpan.org/dist/WWW-GitHub-Gist/>
-
-=back
-
 =head1 ACKNOWLEDGEMENTS
 
 Gist.GitHub.com APIs are incomplete, so many features are not accessible.
+
+L<WWW::GitHub::Gist> used to provide a C<gist> script, which is now available
+in the stand-alone distribution L<App::gist>
+
+=head1 AUTHOR
+
+Alessandro Ghedini <alexbio@cpan.org>
 
 =head1 LICENSE AND COPYRIGHT
 
