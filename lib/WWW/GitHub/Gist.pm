@@ -1,6 +1,6 @@
 package WWW::GitHub::Gist;
 BEGIN {
-  $WWW::GitHub::Gist::VERSION = '0.07';
+  $WWW::GitHub::Gist::VERSION = '0.08';
 }
 
 use Carp;
@@ -16,12 +16,12 @@ WWW::GitHub::Gist - Perl interface to GitHub's Gist pastebin service
 
 =head1 VERSION
 
-version 0.07
+version 0.08
 
 =cut
 
-use constant GIST_URL	=> 'http://gist.github.com';
-use constant API_URL	=> 'http://gist.github.com/api/v1';
+use constant GIST_URL	=> 'https://gist.github.com';
+use constant API_URL	=> GIST_URL.'/api/v1';
 use constant API_FORMAT	=> 'json';
 
 my $http = HTTP::Tiny -> new();
@@ -59,6 +59,16 @@ service of GitHub L<gist.github.com>.
 
     $gist -> add_file('test', 'some data here', '.txt');
     say $gist -> create() -> {'repo'};
+
+    # Update a pre-existent gist
+    $gist = WWW::GitHub::Gist -> new(
+      id => 'gist id',
+      user  => $login,
+      token => $token
+    );
+
+    $gist -> add_file('test2', 'some other data here', '.txt');
+    $gist -> update;
 
 =head1 METHODS
 
@@ -137,9 +147,18 @@ sub info {
 		croak 'Err: '.$response -> {'reason'};
 	}
 
-	my $info	= _parse_response($response -> {'content'});
+	my $info	= decode_json($response -> {'content'});
 
-	return @{ $info -> {'gists'} }[0];
+	my $gist_info = @{ $info -> {'gists'} }[0];
+
+	foreach my $file(@{ $gist_info -> {'files'} }) {
+		my $content = $self -> file($file);
+		my $ext = '.txt';
+
+		$self -> add_file($file, $content, $ext);
+	}
+
+	return $gist_info;
 }
 
 =head2 file( $filename )
@@ -177,7 +196,7 @@ sub user {
 		croak 'Err: '.$response -> {'reason'};
 	}
 
-	my $info	= _parse_response($response -> {'content'});
+	my $info	= decode_json($response -> {'content'});
 
 	return $info -> {'gists'};
 }
@@ -236,25 +255,50 @@ sub create {
 		croak 'Err: '.$response -> {'reason'};
 	}
 
-	my $info	= _parse_response($response -> {'content'});
+	my $info	= decode_json($response -> {'content'});
 
 	return @{ $info -> {'gists'} }[0];
 }
 
-=head1 INTERNAL SUBROUTINES
+=head2 update
 
-=head2 _parse_response( $data )
-
-Parse the response of an HTTP request.
+Update the given gist using files added with add_file().
 
 =cut
 
-sub _parse_response {
-	my $data = shift;
+sub update {
+	my @params;
+	my $self = shift;
 
-	my $json_text = decode_json $data;
+	my $url		= GIST_URL.'/gists/'.$self -> {'id'};
 
-	return $json_text;
+	my $login	= 'login='.$self -> {'user'};
+	my $token	= 'token='.$self -> {'token'};
+
+	$self -> info;
+
+	push @params, $login, $token;
+
+	foreach my $file (@{$self -> {'files'}}) {
+		my $ext		= $file -> {'file_ext'};
+		my $filename	= $file -> {'file_name'};
+		my $data	= $file -> {'file_contents'};
+
+		push @params,	"file_ext[$filename]=$ext",
+				"file_name[$filename]=$filename",
+				"file_contents[$filename]=$data";
+	}
+
+	my $response = $http -> request('PUT', $url, {
+		content => join("&", @params),
+		headers => {'content-type' => 'application/x-www-form-urlencoded'}
+	});
+
+	if ($response -> {'status'} != 302) {
+		croak 'Err: '.$response -> {'reason'};
+	}
+
+	#return $self -> info;
 }
 
 =head1 EXTENSION

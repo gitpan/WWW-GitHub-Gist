@@ -2,6 +2,40 @@
 9999-99-99 99:99:99 +0000 HEAD
 ==============================
 
+  commit 88b125a95b541a52c67c8ac241954222de4f60e8
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Sat Mar 26 19:29:21 2011 +0100
+  
+    bump version
+
+  commit 3f41743e02a5dffd6e88d1c96d3d97fe6068d511
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Sat Mar 26 19:25:12 2011 +0100
+  
+    remove '_parse_response' subroutine
+
+  commit 226557c685805b61d10da3cfa61f07ee844280c4
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Sat Mar 26 19:22:50 2011 +0100
+  
+    add 'update' method
+
+  commit c8dfdbd0ad059eee126be33e00dab01a4773ec75
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Sat Mar 26 19:13:00 2011 +0100
+  
+    automatically add_file on -> info
+
+  commit e61bc2f7d39604fd9d9f8643781c303855fc2af2
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Sat Mar 26 19:01:15 2011 +0100
+  
+    update GIST and API URLs 
+
+===============================
+2011-03-21 21:42:41 +0100 v0.07
+===============================
+
   commit 1c7febf11c6583a77e74445bee15dfb5f055d7c3
   Author: Alessandro Ghedini <al3xbio@gmail.com>
   Date:   Mon Mar 21 21:38:28 2011 +0100
