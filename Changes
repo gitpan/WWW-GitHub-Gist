@@ -2,6 +2,28 @@
 9999-99-99 99:99:99 +0000 HEAD
 ==============================
 
+  commit a1be9c10b337ff4e80fc881ea021b85da2f45d6c
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Sun Mar 27 14:54:27 2011 +0200
+  
+    bump version
+
+  commit 413f346f5b610a1a6bb350f9abe7a414e62931af
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Sun Mar 27 14:51:36 2011 +0200
+  
+    support to gist description on creation
+
+  commit 2e986e160ecb82c17e61d80aa2fb440118f34bf4
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Sun Mar 27 14:45:23 2011 +0200
+  
+    support for private gist creation, closes #1 
+
+===============================
+2011-03-26 19:29:21 +0100 v0.08
+===============================
+
   commit 88b125a95b541a52c67c8ac241954222de4f60e8
   Author: Alessandro Ghedini <al3xbio@gmail.com>
   Date:   Sat Mar 26 19:29:21 2011 +0100

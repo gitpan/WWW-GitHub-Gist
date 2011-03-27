@@ -1,6 +1,6 @@
 package WWW::GitHub::Gist;
 BEGIN {
-  $WWW::GitHub::Gist::VERSION = '0.08';
+  $WWW::GitHub::Gist::VERSION = '0.09';
 }
 
 use Carp;
@@ -16,7 +16,7 @@ WWW::GitHub::Gist - Perl interface to GitHub's Gist pastebin service
 
 =head1 VERSION
 
-version 0.08
+version 0.09
 
 =cut
 
@@ -58,7 +58,13 @@ service of GitHub L<gist.github.com>.
     );
 
     $gist -> add_file('test', 'some data here', '.txt');
-    say $gist -> create() -> {'repo'};
+    say $gist -> create -> {'repo'};
+
+    # Create the gist setting its description
+    say $gist -> create(description => 'gist description here') -> {'repo'};
+
+    # Create a private gist
+    say $gist -> create(private => 1) -> {'repo'};
 
     # Update a pre-existent gist
     $gist = WWW::GitHub::Gist -> new(
@@ -218,16 +224,28 @@ sub add_file {
 		};
 }
 
-=head2 create
+=head2 create( %args )
 
 Create a gist using files added with add_file() and returns its info
-in a hash. See C<info()> for more details.
+in a hash. See C<info()> for more details. The accepted arguments are:
+
+=over
+
+=item C<private>
+
+Create a private gist if true.
+
+=item C<description>
+
+Set the description for the gist.
+
+=back
 
 =cut
 
 sub create {
 	my @params;
-	my $self = shift;
+	my ($self, %args) = @_;
 
 	my $url		= API_URL.'/'.API_FORMAT.'/new';
 
@@ -245,6 +263,9 @@ sub create {
 				"file_name[$filename]=$filename",
 				"file_contents[$filename]=$data";
 	}
+
+	push @params, 'private=on' if $args{'private'};
+	push @params, 'description='.$args{'description'} if $args{'description'};
 
 	my $response = $http -> request('POST', $url, {
 		content => join("&", @params),
