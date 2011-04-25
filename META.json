@@ -4,7 +4,7 @@
       "Alessandro Ghedini <alexbio@cpan.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.200003, CPAN::Meta::Converter version 2.110580",
+   "generated_by" : "Dist::Zilla version 4.200004, CPAN::Meta::Converter version 2.110930",
    "license" : [
       "perl_5"
    ],
@@ -24,6 +24,7 @@
             "Carp" : 0,
             "HTTP::Tiny" : 0,
             "JSON" : 0,
+            "URI::Escape" : 0,
             "constant" : 0
          }
       },
@@ -45,113 +46,113 @@
          "web" : "https://github.com/AlexBio/WWW-GitHub-Gist"
       }
    },
-   "version" : "0.09",
+   "version" : "0.10",
    "x_Dist_Zilla" : {
       "plugins" : [
          {
             "class" : "Dist::Zilla::Plugin::GatherDir",
             "name" : "@Basic/GatherDir",
-            "version" : "4.200003"
+            "version" : "4.200004"
          },
          {
             "class" : "Dist::Zilla::Plugin::PruneCruft",
             "name" : "@Basic/PruneCruft",
-            "version" : "4.200003"
+            "version" : "4.200004"
          },
          {
             "class" : "Dist::Zilla::Plugin::ManifestSkip",
             "name" : "@Basic/ManifestSkip",
-            "version" : "4.200003"
+            "version" : "4.200004"
          },
          {
             "class" : "Dist::Zilla::Plugin::MetaYAML",
             "name" : "@Basic/MetaYAML",
-            "version" : "4.200003"
+            "version" : "4.200004"
          },
          {
             "class" : "Dist::Zilla::Plugin::License",
             "name" : "@Basic/License",
-            "version" : "4.200003"
+            "version" : "4.200004"
          },
          {
             "class" : "Dist::Zilla::Plugin::Readme",
             "name" : "@Basic/Readme",
-            "version" : "4.200003"
+            "version" : "4.200004"
          },
          {
             "class" : "Dist::Zilla::Plugin::ExtraTests",
             "name" : "@Basic/ExtraTests",
-            "version" : "4.200003"
+            "version" : "4.200004"
          },
          {
             "class" : "Dist::Zilla::Plugin::ExecDir",
             "name" : "@Basic/ExecDir",
-            "version" : "4.200003"
+            "version" : "4.200004"
          },
          {
             "class" : "Dist::Zilla::Plugin::ShareDir",
             "name" : "@Basic/ShareDir",
-            "version" : "4.200003"
+            "version" : "4.200004"
          },
          {
             "class" : "Dist::Zilla::Plugin::MakeMaker",
             "name" : "@Basic/MakeMaker",
-            "version" : "4.200003"
+            "version" : "4.200004"
          },
          {
             "class" : "Dist::Zilla::Plugin::Manifest",
             "name" : "@Basic/Manifest",
-            "version" : "4.200003"
+            "version" : "4.200004"
          },
          {
             "class" : "Dist::Zilla::Plugin::TestRelease",
             "name" : "@Basic/TestRelease",
-            "version" : "4.200003"
+            "version" : "4.200004"
          },
          {
             "class" : "Dist::Zilla::Plugin::ConfirmRelease",
             "name" : "@Basic/ConfirmRelease",
-            "version" : "4.200003"
+            "version" : "4.200004"
          },
          {
             "class" : "Dist::Zilla::Plugin::UploadToCPAN",
             "name" : "@Basic/UploadToCPAN",
-            "version" : "4.200003"
+            "version" : "4.200004"
          },
          {
             "class" : "Dist::Zilla::Plugin::GitHub::Meta",
             "name" : "@GitHub/GitHub::Meta",
-            "version" : "0.06"
+            "version" : "0.07"
          },
          {
             "class" : "Dist::Zilla::Plugin::GitHub::Update",
             "name" : "@GitHub/GitHub::Update",
-            "version" : "0.06"
+            "version" : "0.07"
          },
          {
             "class" : "Dist::Zilla::Plugin::MetaConfig",
             "name" : "MetaConfig",
-            "version" : "4.200003"
+            "version" : "4.200004"
          },
          {
             "class" : "Dist::Zilla::Plugin::MetaJSON",
             "name" : "MetaJSON",
-            "version" : "4.200003"
+            "version" : "4.200004"
          },
          {
             "class" : "Dist::Zilla::Plugin::AutoPrereqs",
             "name" : "AutoPrereqs",
-            "version" : "4.200003"
+            "version" : "4.200004"
          },
          {
             "class" : "Dist::Zilla::Plugin::PodVersion",
             "name" : "PodVersion",
-            "version" : "4.200003"
+            "version" : "4.200004"
          },
          {
             "class" : "Dist::Zilla::Plugin::PkgVersion",
             "name" : "PkgVersion",
-            "version" : "4.200003"
+            "version" : "4.200004"
          },
          {
             "class" : "Dist::Zilla::Plugin::ChangelogFromGit",
@@ -171,22 +172,22 @@
          {
             "class" : "Dist::Zilla::Plugin::FinderCode",
             "name" : ":InstallModules",
-            "version" : "4.200003"
+            "version" : "4.200004"
          },
          {
             "class" : "Dist::Zilla::Plugin::FinderCode",
             "name" : ":TestFiles",
-            "version" : "4.200003"
+            "version" : "4.200004"
          },
          {
             "class" : "Dist::Zilla::Plugin::FinderCode",
             "name" : ":ExecFiles",
-            "version" : "4.200003"
+            "version" : "4.200004"
          },
          {
             "class" : "Dist::Zilla::Plugin::FinderCode",
             "name" : ":ShareFiles",
-            "version" : "4.200003"
+            "version" : "4.200004"
          }
       ],
       "zilla" : {
@@ -194,7 +195,7 @@
          "config" : {
             "is_trial" : 0
          },
-         "version" : "4.200003"
+         "version" : "4.200004"
       }
    }
 }

@@ -1,11 +1,12 @@
 package WWW::GitHub::Gist;
 BEGIN {
-  $WWW::GitHub::Gist::VERSION = '0.09';
+  $WWW::GitHub::Gist::VERSION = '0.10';
 }
 
 use Carp;
 use JSON;
 use HTTP::Tiny;
+use URI::Escape;
 
 use strict;
 use warnings;
@@ -16,7 +17,7 @@ WWW::GitHub::Gist - Perl interface to GitHub's Gist pastebin service
 
 =head1 VERSION
 
-version 0.09
+version 0.10
 
 =cut
 
@@ -220,7 +221,7 @@ sub add_file {
 		{
 			'file_ext'      => $extension ? $extension : '.txt',
 			'file_name'     => $filename,
-			'file_contents' => $data
+			'file_contents' => uri_escape($data)
 		};
 }
 

@@ -2,6 +2,22 @@
 9999-99-99 99:99:99 +0000 HEAD
 ==============================
 
+  commit 0d7702e7529757757b849259b729df23ecee474c
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Mon Apr 25 18:42:14 2011 +0200
+  
+    bump version
+
+  commit 78f832a10f65bafe1bd5b340a180f2dd9e68d904
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date:   Mon Apr 25 18:38:28 2011 +0200
+  
+    escape data before submitting 
+
+===============================
+2011-03-27 14:54:27 +0200 v0.09
+===============================
+
   commit a1be9c10b337ff4e80fc881ea021b85da2f45d6c
   Author: Alessandro Ghedini <al3xbio@gmail.com>
   Date:   Sun Mar 27 14:54:27 2011 +0200
