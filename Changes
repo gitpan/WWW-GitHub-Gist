@@ -2,296 +2,67 @@
 9999-99-99 99:99:99 +0000 HEAD
 ==============================
 
-  commit 0d7702e7529757757b849259b729df23ecee474c
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Mon Apr 25 18:42:14 2011 +0200
-  
-    bump version
+  [31mb4d4fe1[m -[33m (HEAD, master)[m bump version [32m(37 seconds ago)[m
+  [31mc671d8d[m -[33m[m use Any::Moose [32m(2 minutes ago)[m
+  [31m8dfd452[m -[33m[m add support to v3 api [32m(2 minutes ago)[m
+  [31mace703b[m -[33m[m remove cruft tests [32m(13 days ago)[m
+  [31m9de4113[m -[33m[m use Author::ALEXBIO dzil bundle [32m(5 months ago)[m
+===============================
+2011-04-25 18:42:14 +0200 v0.10
+===============================
 
-  commit 78f832a10f65bafe1bd5b340a180f2dd9e68d904
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Mon Apr 25 18:38:28 2011 +0200
-  
-    escape data before submitting 
-
+  [31m0d7702e[m -[33m (v0.10, origin/master)[m bump version [32m(5 months ago)[m
+  [31m78f832a[m -[33m[m escape data before submitting [32m(5 months ago)[m
 ===============================
 2011-03-27 14:54:27 +0200 v0.09
 ===============================
 
-  commit a1be9c10b337ff4e80fc881ea021b85da2f45d6c
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Sun Mar 27 14:54:27 2011 +0200
-  
-    bump version
-
-  commit 413f346f5b610a1a6bb350f9abe7a414e62931af
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Sun Mar 27 14:51:36 2011 +0200
-  
-    support to gist description on creation
-
-  commit 2e986e160ecb82c17e61d80aa2fb440118f34bf4
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Sun Mar 27 14:45:23 2011 +0200
-  
-    support for private gist creation, closes #1 
-
+  [31ma1be9c1[m -[33m (v0.09)[m bump version [32m(6 months ago)[m
+  [31m413f346[m -[33m[m support to gist description on creation [32m(6 months ago)[m
+  [31m2e986e1[m -[33m[m support for private gist creation, closes #1 [32m(6 months ago)[m
 ===============================
 2011-03-26 19:29:21 +0100 v0.08
 ===============================
 
-  commit 88b125a95b541a52c67c8ac241954222de4f60e8
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Sat Mar 26 19:29:21 2011 +0100
-  
-    bump version
-
-  commit 3f41743e02a5dffd6e88d1c96d3d97fe6068d511
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Sat Mar 26 19:25:12 2011 +0100
-  
-    remove '_parse_response' subroutine
-
-  commit 226557c685805b61d10da3cfa61f07ee844280c4
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Sat Mar 26 19:22:50 2011 +0100
-  
-    add 'update' method
-
-  commit c8dfdbd0ad059eee126be33e00dab01a4773ec75
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Sat Mar 26 19:13:00 2011 +0100
-  
-    automatically add_file on -> info
-
-  commit e61bc2f7d39604fd9d9f8643781c303855fc2af2
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Sat Mar 26 19:01:15 2011 +0100
-  
-    update GIST and API URLs 
-
+  [31m88b125a[m -[33m (v0.08)[m bump version [32m(6 months ago)[m
+  [31m3f41743[m -[33m[m remove '_parse_response' subroutine [32m(6 months ago)[m
+  [31m226557c[m -[33m[m add 'update' method [32m(6 months ago)[m
+  [31mc8dfdbd[m -[33m[m automatically add_file on  -> info [32m(6 months ago)[m
+  [31me61bc2f[m -[33m[m update GIST and API URLs [32m(6 months ago)[m
 ===============================
 2011-03-21 21:42:41 +0100 v0.07
 ===============================
 
-  commit 1c7febf11c6583a77e74445bee15dfb5f055d7c3
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Mon Mar 21 21:38:28 2011 +0100
-  
-    bump version
-
-  commit d1f108cb1f3c178f3258a43b05a54b745d4bd2b9
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Mon Mar 21 21:39:14 2011 +0100
-  
-    move ACKNOWLEDGEMENTS section up
-
-  commit 71591624c4d657229b471e0b3930f024294af119
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Mon Mar 21 21:34:05 2011 +0100
-  
-    move gist script to standalone App::gist
-
-  commit b042dbbf07c190dac970b54098ff467c055398a1
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Mon Mar 21 21:20:38 2011 +0100
-  
-    add more verbose usage hint
-
-  commit f7d2e1f1f5a620298a731c542d3009606acf98de
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Mon Mar 21 21:17:00 2011 +0100
-  
-    fix 'corrupt tree file' caused by not using basenames
-
-  commit 529496a6d5390fa8da18b342996777f430c56882
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Mon Mar 21 21:12:11 2011 +0100
-  
-    fix info message for automatic extension
-
-  commit 998039058177ac7f3524d0fe6f24176b7d879a22
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Mon Mar 21 21:09:45 2011 +0100
-  
-    fix script names in gist synopsis
-
-  commit 25fa12a374d1b990ea5d5b225c4d0941961f5c2c
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Thu Mar 17 19:49:01 2011 +0100
-  
-    purge cruft from docs
-
-  commit 89444d0a7499474460498ff41dd46e00b6e51db9
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Thu Mar 17 19:48:32 2011 +0100
-  
-    fix email address
-
-  commit 89650ea54301179a5119fb28ff085bf512bf9ac3
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Mon Mar 7 17:41:05 2011 +0100
-  
-    switch to @GitHub bundle
-
-  commit f8fb8d58d6d86ced0ea51ad3b07c139b71ced253
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Mon Feb 21 11:35:23 2011 +0100
-  
-    add GithubUpdate to dist.ini 
-
+  [31m1c7febf[m -[33m (v0.07)[m bump version [32m(6 months ago)[m
+  [31md1f108c[m -[33m[m move ACKNOWLEDGEMENTS section up [32m(6 months ago)[m
+  [31m7159162[m -[33m[m move gist script to standalone App::gist [32m(6 months ago)[m
+  [31mb042dbb[m -[33m[m add more verbose usage hint [32m(6 months ago)[m
+  [31mf7d2e1f[m -[33m[m fix 'corrupt tree file' caused by not using basenames [32m(6 months ago)[m
+  [31m529496a[m -[33m[m fix info message for automatic extension [32m(6 months ago)[m
+  [31m9980390[m -[33m[m fix script names in gist synopsis [32m(6 months ago)[m
+  [31m25fa12a[m -[33m[m purge cruft from docs [32m(6 months ago)[m
+  [31m89444d0[m -[33m[m fix email address [32m(6 months ago)[m
+  [31m89650ea[m -[33m[m switch to @GitHub bundle [32m(7 months ago)[m
+  [31mf8fb8d5[m -[33m[m add GithubUpdate to dist.ini [32m(7 months ago)[m
 ===============================
 2011-02-20 18:55:03 +0100 v0.06
 ===============================
 
-  commit ead2fb6f5548678c48256cd237c26db5fa8d8b63
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Sun Feb 20 18:15:35 2011 +0100
-  
-    bump version
-
-  commit 7f8e853f473cca97697ecd57d4c310f7d4027d52
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Sun Feb 20 18:15:17 2011 +0100
-  
-    improve and update bin/gist
-
-  commit 41309932b797405fe145d1a01fc8dab43bac86a8
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Sun Feb 20 18:08:10 2011 +0100
-  
-    create() returns only first gist
-
-  commit 759ffe79ef2e2b98c2c89108142e88fa30c93b66
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Sun Feb 20 17:47:20 2011 +0100
-  
-    use git general config for login info
-
-  commit 4fc405fec9458cca8beba14c10e50e90c99b115e
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Sun Feb 20 17:41:23 2011 +0100
-  
-    rename script/gist.pl -> bin/gist
-
-  commit 874af4c43adcb0fdc71bbccba788e6198d25e828
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Sun Feb 20 17:37:36 2011 +0100
-  
-    update documentation
-
-  commit a9f8f09ce98da936f42fbe0cfdc3e23e062435ce
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Sun Feb 20 17:15:01 2011 +0100
-  
-    use constant
-
-  commit ac85c8eb061084fd6b1e32ea92c47487dbe4cb61
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Sun Feb 20 17:09:55 2011 +0100
-  
-    remove useless cruft
-
-  commit a7e12e6d6056a2dde1223a2a23f207cc52f0c201
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Sun Feb 20 17:08:55 2011 +0100
-  
-    move create() to HTTP::Tiny
-
-  commit 2776c23c4d94c5d71191b3eebab713e8216722db
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Sun Feb 20 16:53:41 2011 +0100
-  
-    clean-up add_file() code
-
-  commit 48d7ed8d4b5c44968078b4c57d4de8d9b389548d
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Sun Feb 20 16:52:23 2011 +0100
-  
-    move user() to HTTP::Tiny
-
-  commit 8bdfcf5c4f4e72d929676ec47e4fb3d8ecdaadd7
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Sun Feb 20 16:50:08 2011 +0100
-  
-    move file() to HTTP::Tiny
-
-  commit 61a4379360c50b78ab70bd5806291b6018fbac9d
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Sun Feb 20 16:47:23 2011 +0100
-  
-    move info() to HTTP::Tiny
-
-  commit 0da13427c74e05688cf7c263acf1dd32eb0920c2
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Sun Feb 20 16:24:29 2011 +0100
-  
-    use dzil plugins for module version
-
-  commit c4431cb3533e29f30705bd830ea2185420023ea0
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Sun Feb 20 16:22:35 2011 +0100
-  
-    switch to Dist::Zilla 
-
-===============================
-2010-08-22 15:41:51 +0200 v0.05
-===============================
-
-  commit 2908b3081d144c45ebb9017c815885207a0c887d
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Sun Aug 22 15:41:51 2010 +0200
-  
-    fix wrong naming for gist.pl 
-
-===============================
-2010-08-22 15:33:15 +0200 v0.04
-===============================
-
-  commit e10703d548e04222afd4cc5e84488f47129256e4
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Sun Aug 22 15:33:15 2010 +0200
-  
-    add gist.pl in Makefile.PL
-
-  commit cb42b1020b7571821bf8127ddfa1412fb2b8c673
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Sun Aug 22 15:31:52 2010 +0200
-  
-    fix output
-
-  commit 1a95a2fd4d1ec37b0742c32d6345a621985d3bf4
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Sun Aug 22 15:13:14 2010 +0200
-  
-    add script/gist.pl 
-
-===============================
-2010-06-10 14:29:43 +0200 v0.03
-===============================
-
-  commit 585c6d68155741a42ebf6261445e7d97c3a3c0a3
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Thu Jun 10 14:29:43 2010 +0200
-  
-    fix compilation errors... I forgot some prereq 
-
-===============================
-2010-06-08 21:54:25 +0200 v0.02
-===============================
-
-  commit c56688138febf18019116dbda656ab66b9d801fe
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Tue Jun 8 21:54:25 2010 +0200
-  
-    update version
-
-  commit 9c1682f55d9f4e7798c710ae3297418fab39d672
-  Author: Alessandro Ghedini <al3xbio@gmail.com>
-  Date:   Tue Jun 8 21:53:00 2010 +0200
-  
-    update prereq in Makefile.PL 
-
+  [31mead2fb6[m -[33m (v0.06)[m bump version [32m(7 months ago)[m
+  [31m7f8e853[m -[33m[m improve and update bin/gist [32m(7 months ago)[m
+  [31m4130993[m -[33m[m create() returns only first gist [32m(7 months ago)[m
+  [31m759ffe7[m -[33m[m use git general config for login info [32m(7 months ago)[m
+  [31m4fc405f[m -[33m[m rename script/gist.pl -> bin/gist [32m(7 months ago)[m
+  [31m874af4c[m -[33m[m update documentation [32m(7 months ago)[m
+  [31ma9f8f09[m -[33m[m use constant [32m(7 months ago)[m
+  [31mac85c8e[m -[33m[m remove useless cruft [32m(7 months ago)[m
+  [31ma7e12e6[m -[33m[m move create() to HTTP::Tiny [32m(7 months ago)[m
+  [31m2776c23[m -[33m[m clean-up add_file() code [32m(7 months ago)[m
+  [31m48d7ed8[m -[33m[m move user() to HTTP::Tiny [32m(7 months ago)[m
+  [31m8bdfcf5[m -[33m[m move file() to HTTP::Tiny [32m(7 months ago)[m
+  [31m61a4379[m -[33m[m move info() to HTTP::Tiny [32m(7 months ago)[m
+  [31m0da1342[m -[33m[m use dzil plugins for module version [32m(7 months ago)[m
+  [31mc4431cb[m -[33m[m switch to Dist::Zilla [32m(7 months ago)[m
 ===================================
 End of changes in the last 365 days
 ===================================
