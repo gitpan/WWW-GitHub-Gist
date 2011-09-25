@@ -2,16 +2,22 @@
 9999-99-99 99:99:99 +0000 HEAD
 ==============================
 
-  [31mb4d4fe1[m -[33m (HEAD, master)[m bump version [32m(37 seconds ago)[m
-  [31mc671d8d[m -[33m[m use Any::Moose [32m(2 minutes ago)[m
-  [31m8dfd452[m -[33m[m add support to v3 api [32m(2 minutes ago)[m
-  [31mace703b[m -[33m[m remove cruft tests [32m(13 days ago)[m
+  [31md6c3228[m -[33m (HEAD, master)[m bump version [32m(6 seconds ago)[m
+  [31ma1d3af5[m -[33m[m make WWW::GitHub::Gist::v3 immutable [32m(7 minutes ago)[m
+===============================
+2011-09-24 16:55:46 +0200 v0.11
+===============================
+
+  [31mb4d4fe1[m -[33m (v0.11, origin/master)[m bump version [32m(22 hours ago)[m
+  [31mc671d8d[m -[33m[m use Any::Moose [32m(22 hours ago)[m
+  [31m8dfd452[m -[33m[m add support to v3 api [32m(22 hours ago)[m
+  [31mace703b[m -[33m[m remove cruft tests [32m(2 weeks ago)[m
   [31m9de4113[m -[33m[m use Author::ALEXBIO dzil bundle [32m(5 months ago)[m
 ===============================
 2011-04-25 18:42:14 +0200 v0.10
 ===============================
 
-  [31m0d7702e[m -[33m (v0.10, origin/master)[m bump version [32m(5 months ago)[m
+  [31m0d7702e[m -[33m (v0.10)[m bump version [32m(5 months ago)[m
   [31m78f832a[m -[33m[m escape data before submitting [32m(5 months ago)[m
 ===============================
 2011-03-27 14:54:27 +0200 v0.09

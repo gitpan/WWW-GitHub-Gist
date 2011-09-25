@@ -1,6 +1,6 @@
 package WWW::GitHub::Gist::v3;
 {
-  $WWW::GitHub::Gist::v3::VERSION = '0.11';
+  $WWW::GitHub::Gist::v3::VERSION = '0.12';
 }
 
 use Any::Moose;
@@ -18,7 +18,7 @@ WWW::GitHub::Gist::v3 - Perl interface to GitHub's Gist pastebin service (v3)
 
 =head1 VERSION
 
-version 0.11
+version 0.12
 
 =cut
 
@@ -450,5 +450,9 @@ by the Free Software Foundation; or the Artistic License.
 See http://dev.perl.org/licenses/ for more information.
 
 =cut
+
+no Any::Moose;
+
+__PACKAGE__ -> meta -> make_immutable;
 
 1; # End of WWW::GitHub::Gist::v3
