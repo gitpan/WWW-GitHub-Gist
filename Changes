@@ -2,13 +2,22 @@
 9999-99-99 99:99:99 +0000 HEAD
 ==============================
 
-  [31md6c3228[m -[33m (HEAD, master)[m bump version [32m(6 seconds ago)[m
-  [31ma1d3af5[m -[33m[m make WWW::GitHub::Gist::v3 immutable [32m(7 minutes ago)[m
+  [31m57470d5[m -[33m (HEAD, master)[m bump version (should be last for today, hopefully) [32m(5 seconds ago)[m
+  [31m6abe6ec[m -[33m[m do not run POD::Coverage tests [32m(5 seconds ago)[m
+  [31m8f85d9e[m -[33m[m improve short and long descriptions [32m(71 seconds ago)[m
+  [31m4e60076[m -[33m[m minor tweaks to ::v3 POD [32m(71 seconds ago)[m
+  [31mef595c2[m -[33m[m remove debug cruft -.-'' [32m(10 minutes ago)[m
+===============================
+2011-09-25 15:02:45 +0200 v0.12
+===============================
+
+  [31md6c3228[m -[33m (v0.12, origin/master)[m bump version [32m(19 minutes ago)[m
+  [31ma1d3af5[m -[33m[m make WWW::GitHub::Gist::v3 immutable [32m(26 minutes ago)[m
 ===============================
 2011-09-24 16:55:46 +0200 v0.11
 ===============================
 
-  [31mb4d4fe1[m -[33m (v0.11, origin/master)[m bump version [32m(22 hours ago)[m
+  [31mb4d4fe1[m -[33m (v0.11)[m bump version [32m(22 hours ago)[m
   [31mc671d8d[m -[33m[m use Any::Moose [32m(22 hours ago)[m
   [31m8dfd452[m -[33m[m add support to v3 api [32m(22 hours ago)[m
   [31mace703b[m -[33m[m remove cruft tests [32m(2 weeks ago)[m

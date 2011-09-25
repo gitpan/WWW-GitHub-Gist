@@ -1,6 +1,6 @@
 package WWW::GitHub::Gist::v2;
 {
-  $WWW::GitHub::Gist::v2::VERSION = '0.12';
+  $WWW::GitHub::Gist::v2::VERSION = '0.13';
 }
 
 use Carp;
@@ -13,11 +13,11 @@ use warnings;
 
 =head1 NAME
 
-WWW::GitHub::Gist::v2 - Perl interface to GitHub's Gist pastebin service (v2)
+WWW::GitHub::Gist::v2 - Perl interface to the GitHub's pastebin service (v2)
 
 =head1 VERSION
 
-version 0.12
+version 0.13
 
 =cut
 
@@ -76,10 +76,10 @@ my $http = HTTP::Tiny -> new();
 
 =head1 DESCRIPTION
 
-L<WWW::GitHub::Gist> is an object-oriented interface to the pastebin
-service of GitHub L<gist.github.com>.
+L<WWW::GitHub::Gist> provides an object-oriented interface for Perl to the
+L<gist.github.com> API. Gist is a pastebin service operated by GitHub.
 
-This is the interface to the version 2 of the API.
+This module implements the interface to the version 2 of the API.
 
 =head1 METHODS
 

@@ -1,9 +1,9 @@
 
 
 This archive contains the distribution WWW-GitHub-Gist,
-version 0.12:
+version 0.13:
 
-  Perl interface to GitHub's Gist pastebin service
+  Perl interface to the GitHub's pastebin service
 
 This software is copyright (c) 2011 by Alessandro Ghedini.
 

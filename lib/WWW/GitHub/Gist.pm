@@ -1,6 +1,6 @@
 package WWW::GitHub::Gist;
 {
-  $WWW::GitHub::Gist::VERSION = '0.12';
+  $WWW::GitHub::Gist::VERSION = '0.13';
 }
 
 use strict;
@@ -10,11 +10,11 @@ use base qw(WWW::GitHub::Gist::v2);
 
 =head1 NAME
 
-WWW::GitHub::Gist - Perl interface to GitHub's Gist pastebin service
+WWW::GitHub::Gist - Perl interface to the GitHub's pastebin service
 
 =head1 VERSION
 
-version 0.12
+version 0.13
 
 =head1 SYNOPSIS
 
@@ -27,8 +27,8 @@ See L<WWW::GitHub::Gist::v2> for more information.
 
 =head1 DESCRIPTION
 
-L<WWW::GitHub::Gist> is an object-oriented interface to the pastebin
-service of GitHub L<gist.github.com>.
+L<WWW::GitHub::Gist> provides an object-oriented interface for Perl to the
+L<gist.github.com> API. Gist is a pastebin service operated by GitHub.
 
 You can use either the L<v2|WWW::GitHub::Gist::v2> of the API (default),
 or the L<v3|WWW::GitHub::Gist::v3>.

@@ -1,6 +1,6 @@
 package WWW::GitHub::Gist::v3;
 {
-  $WWW::GitHub::Gist::v3::VERSION = '0.12';
+  $WWW::GitHub::Gist::v3::VERSION = '0.13';
 }
 
 use Any::Moose;
@@ -14,11 +14,11 @@ use warnings;
 
 =head1 NAME
 
-WWW::GitHub::Gist::v3 - Perl interface to GitHub's Gist pastebin service (v3)
+WWW::GitHub::Gist::v3 - Perl interface to the GitHub's pastebin service (v3)
 
 =head1 VERSION
 
-version 0.12
+version 0.13
 
 =cut
 
@@ -64,10 +64,10 @@ has 'api_url' => (
 
 =head1 DESCRIPTION
 
-L<WWW::GitHub::Gist> is an object-oriented interface to the pastebin
-service of GitHub L<gist.github.com>.
+L<WWW::GitHub::Gist> provides an object-oriented interface for Perl to the
+L<gist.github.com> API. Gist is a pastebin service operated by GitHub.
 
-This is the interface to the version 3 of the API.
+This module implements the interface to the version 3 of the API.
 
 =head1 METHODS
 
@@ -90,7 +90,7 @@ has 'id'  => (
 
 =item * C<user>
 
-Username
+GitHub username.
 
 =cut
 
@@ -163,7 +163,7 @@ Whether the new gist is public or not (optional, defaults to '1').
 
 =item * C<files>
 
-A hash reference containing the new gist's file names and conttents.
+A hash reference containing the new gist's file names and contents.
 
 =back
 
@@ -250,7 +250,7 @@ sub edit {
 	return $self -> patch_json_obj($data, "/gists/$gist");
 }
 
-=head2 fork($gist_id)
+=head2 fork( $gist_id )
 
 Forks the given gist. By default uses the 'id' attribute defined in ->new.
 
@@ -267,7 +267,7 @@ sub fork {
 	return $self -> post_json_obj("", "/gists/$gist/fork");
 }
 
-=head2 delete($gist_id)
+=head2 delete( $gist_id )
 
 Deletes the given gist. By default uses the 'id' attribute defined in ->new.
 
@@ -284,7 +284,7 @@ sub delete {
 	$self -> delete_json_obj("/gists/$gist");
 }
 
-=head2 star($gist_id)
+=head2 star( $gist_id )
 
 Stars the given gist. By default uses the 'id' attribute defined in ->new.
 
@@ -301,7 +301,7 @@ sub star {
 	$self -> put_json_obj("/gists/$gist/star");
 }
 
-=head2 unstar($gist_id)
+=head2 unstar( $gist_id )
 
 Unstars the given gist. By default uses the 'id' attribute defined in ->new.
 
@@ -318,11 +318,7 @@ sub unstar {
 	$self -> delete_json_obj("/gists/$gist/star");
 }
 
-=head1 PRIVATE METHODS
-
-=head2 get_json_obj
-
-=cut
+### PRIVATE METHODS ###
 
 sub get_json_obj {
 	my ($self, $url) = @_;
@@ -335,10 +331,6 @@ sub get_json_obj {
 
 	return $resp_data;
 }
-
-=head2 post_json_obj
-
-=cut
 
 sub post_json_obj {
 	my ($self, $data, $url) = @_;
@@ -356,10 +348,6 @@ sub post_json_obj {
 	return $resp_data;
 }
 
-=head2 patch_json_obj
-
-=cut
-
 sub patch_json_obj {
 	my ($self, $data, $url) = @_;
 
@@ -376,10 +364,6 @@ sub patch_json_obj {
 	return $resp_data;
 }
 
-=head2 put_json_obj
-
-=cut
-
 sub put_json_obj {
 	my ($self, $url) = @_;
 
@@ -390,18 +374,11 @@ sub put_json_obj {
 
 	my $response  = HTTP::Tiny -> new -> request('PUT', $req_url, $options);
 
-	use Data::Dumper;
-	die Dumper $response;
-
 	if ($response -> {'status'} != 204) {
 		my $resp_data = from_json $response -> {'content'};
 		croak $resp_data -> {'message'};
 	}
 }
-
-=head2 delete_json_obj
-
-=cut
 
 sub delete_json_obj {
 	my ($self, $url) = @_;
@@ -418,10 +395,6 @@ sub delete_json_obj {
 		croak $resp_data -> {'message'};
 	}
 }
-
-=head2 basic_auth_header
-
-=cut
 
 sub basic_auth_header {
 	require MIME::Base64;

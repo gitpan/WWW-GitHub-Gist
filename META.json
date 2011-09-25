@@ -1,5 +1,5 @@
 {
-   "abstract" : "Perl interface to GitHub's Gist pastebin service",
+   "abstract" : "Perl interface to the GitHub's pastebin service",
    "author" : [
       "Alessandro Ghedini <alexbio@cpan.org>"
    ],
@@ -23,7 +23,6 @@
          "requires" : {
             "Any::Moose" : 0,
             "Carp" : 0,
-            "Data::Dumper" : 0,
             "HTTP::Tiny" : 0,
             "JSON" : 0,
             "MIME::Base64" : 0,
@@ -54,7 +53,7 @@
          "web" : "https://github.com/AlexBio/WWW-GitHub-Gist"
       }
    },
-   "version" : "0.12",
+   "version" : "0.13",
    "x_Dist_Zilla" : {
       "plugins" : [
          {
@@ -175,11 +174,6 @@
          {
             "class" : "Dist::Zilla::Plugin::PodSyntaxTests",
             "name" : "@Author::ALEXBIO/PodSyntaxTests",
-            "version" : "4.300002"
-         },
-         {
-            "class" : "Dist::Zilla::Plugin::PodCoverageTests",
-            "name" : "@Author::ALEXBIO/PodCoverageTests",
             "version" : "4.300002"
          },
          {

@@ -9,7 +9,7 @@ use ExtUtils::MakeMaker 6.30;
 
 
 my %WriteMakefileArgs = (
-  "ABSTRACT" => "Perl interface to GitHub's Gist pastebin service",
+  "ABSTRACT" => "Perl interface to the GitHub's pastebin service",
   "AUTHOR" => "Alessandro Ghedini <alexbio\@cpan.org>",
   "BUILD_REQUIRES" => {
     "File::Find" => 0,
@@ -26,7 +26,6 @@ my %WriteMakefileArgs = (
   "PREREQ_PM" => {
     "Any::Moose" => 0,
     "Carp" => 0,
-    "Data::Dumper" => 0,
     "HTTP::Tiny" => 0,
     "JSON" => 0,
     "MIME::Base64" => 0,
@@ -36,7 +35,7 @@ my %WriteMakefileArgs = (
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "0.12",
+  "VERSION" => "0.13",
   "test" => {
     "TESTS" => "t/*.t"
   }

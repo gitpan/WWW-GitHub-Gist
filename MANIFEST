@@ -14,5 +14,4 @@ t/01-gist-default.t
 t/01-gist-v2.t
 t/01-gist-v3.t
 t/release-check-manifest.t
-t/release-pod-coverage.t
 t/release-pod-syntax.t
