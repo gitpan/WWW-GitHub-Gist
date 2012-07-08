@@ -1,6 +1,6 @@
 package WWW::GitHub::Gist::v3;
 {
-  $WWW::GitHub::Gist::v3::VERSION = '0.13';
+  $WWW::GitHub::Gist::v3::VERSION = '0.14';
 }
 
 use Any::Moose;
@@ -18,7 +18,7 @@ WWW::GitHub::Gist::v3 - Perl interface to the GitHub's pastebin service (v3)
 
 =head1 VERSION
 
-version 0.13
+version 0.14
 
 =cut
 

@@ -1,6 +1,6 @@
 package WWW::GitHub::Gist::v2;
 {
-  $WWW::GitHub::Gist::v2::VERSION = '0.13';
+  $WWW::GitHub::Gist::v2::VERSION = '0.14';
 }
 
 use Carp;
@@ -17,7 +17,7 @@ WWW::GitHub::Gist::v2 - Perl interface to the GitHub's pastebin service (v2)
 
 =head1 VERSION
 
-version 0.13
+version 0.14
 
 =cut
 

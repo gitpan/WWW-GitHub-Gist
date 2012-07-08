@@ -1,83 +1,107 @@
-==============================
-9999-99-99 99:99:99 +0000 HEAD
-==============================
+==================================================
+Changes from 2011-07-09 00:00:00 +0000 to present.
+==================================================
 
-  [31m57470d5[m -[33m (HEAD, master)[m bump version (should be last for today, hopefully) [32m(5 seconds ago)[m
-  [31m6abe6ec[m -[33m[m do not run POD::Coverage tests [32m(5 seconds ago)[m
-  [31m8f85d9e[m -[33m[m improve short and long descriptions [32m(71 seconds ago)[m
-  [31m4e60076[m -[33m[m minor tweaks to ::v3 POD [32m(71 seconds ago)[m
-  [31mef595c2[m -[33m[m remove debug cruft -.-'' [32m(10 minutes ago)[m
-===============================
-2011-09-25 15:02:45 +0200 v0.12
-===============================
+-----------------------------------------
+version 0.14 at 2012-07-08 20:36:14 +0000
+-----------------------------------------
 
-  [31md6c3228[m -[33m (v0.12, origin/master)[m bump version [32m(19 minutes ago)[m
-  [31ma1d3af5[m -[33m[m make WWW::GitHub::Gist::v3 immutable [32m(26 minutes ago)[m
-===============================
-2011-09-24 16:55:46 +0200 v0.11
-===============================
+  Change: 57a52110814b826004fbfa49de36d9b222c954b3
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-07-07 15:00:34 +0000
 
-  [31mb4d4fe1[m -[33m (v0.11)[m bump version [32m(22 hours ago)[m
-  [31mc671d8d[m -[33m[m use Any::Moose [32m(22 hours ago)[m
-  [31m8dfd452[m -[33m[m add support to v3 api [32m(22 hours ago)[m
-  [31mace703b[m -[33m[m remove cruft tests [32m(2 weeks ago)[m
-  [31m9de4113[m -[33m[m use Author::ALEXBIO dzil bundle [32m(5 months ago)[m
-===============================
-2011-04-25 18:42:14 +0200 v0.10
-===============================
+    dist.ini: update repo name 
 
-  [31m0d7702e[m -[33m (v0.10)[m bump version [32m(5 months ago)[m
-  [31m78f832a[m -[33m[m escape data before submitting [32m(5 months ago)[m
-===============================
-2011-03-27 14:54:27 +0200 v0.09
-===============================
+  Change: dcc72e221ef3db647067dff628d4895543295ef1
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-04-07 22:43:58 +0000
 
-  [31ma1be9c1[m -[33m (v0.09)[m bump version [32m(6 months ago)[m
-  [31m413f346[m -[33m[m support to gist description on creation [32m(6 months ago)[m
-  [31m2e986e1[m -[33m[m support for private gist creation, closes #1 [32m(6 months ago)[m
-===============================
-2011-03-26 19:29:21 +0100 v0.08
-===============================
+    dist.ini: use Git::NextVersion plugin 
 
-  [31m88b125a[m -[33m (v0.08)[m bump version [32m(6 months ago)[m
-  [31m3f41743[m -[33m[m remove '_parse_response' subroutine [32m(6 months ago)[m
-  [31m226557c[m -[33m[m add 'update' method [32m(6 months ago)[m
-  [31mc8dfdbd[m -[33m[m automatically add_file on  -> info [32m(6 months ago)[m
-  [31me61bc2f[m -[33m[m update GIST and API URLs [32m(6 months ago)[m
-===============================
-2011-03-21 21:42:41 +0100 v0.07
-===============================
+-----------------------------------------
+version 0.13 at 2011-09-25 13:21:53 +0000
+-----------------------------------------
 
-  [31m1c7febf[m -[33m (v0.07)[m bump version [32m(6 months ago)[m
-  [31md1f108c[m -[33m[m move ACKNOWLEDGEMENTS section up [32m(6 months ago)[m
-  [31m7159162[m -[33m[m move gist script to standalone App::gist [32m(6 months ago)[m
-  [31mb042dbb[m -[33m[m add more verbose usage hint [32m(6 months ago)[m
-  [31mf7d2e1f[m -[33m[m fix 'corrupt tree file' caused by not using basenames [32m(6 months ago)[m
-  [31m529496a[m -[33m[m fix info message for automatic extension [32m(6 months ago)[m
-  [31m9980390[m -[33m[m fix script names in gist synopsis [32m(6 months ago)[m
-  [31m25fa12a[m -[33m[m purge cruft from docs [32m(6 months ago)[m
-  [31m89444d0[m -[33m[m fix email address [32m(6 months ago)[m
-  [31m89650ea[m -[33m[m switch to @GitHub bundle [32m(7 months ago)[m
-  [31mf8fb8d5[m -[33m[m add GithubUpdate to dist.ini [32m(7 months ago)[m
-===============================
-2011-02-20 18:55:03 +0100 v0.06
-===============================
+  Change: 57470d5c819356825c6fa65e52c7173c828539ae
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2011-09-25 15:21:53 +0000
 
-  [31mead2fb6[m -[33m (v0.06)[m bump version [32m(7 months ago)[m
-  [31m7f8e853[m -[33m[m improve and update bin/gist [32m(7 months ago)[m
-  [31m4130993[m -[33m[m create() returns only first gist [32m(7 months ago)[m
-  [31m759ffe7[m -[33m[m use git general config for login info [32m(7 months ago)[m
-  [31m4fc405f[m -[33m[m rename script/gist.pl -> bin/gist [32m(7 months ago)[m
-  [31m874af4c[m -[33m[m update documentation [32m(7 months ago)[m
-  [31ma9f8f09[m -[33m[m use constant [32m(7 months ago)[m
-  [31mac85c8e[m -[33m[m remove useless cruft [32m(7 months ago)[m
-  [31ma7e12e6[m -[33m[m move create() to HTTP::Tiny [32m(7 months ago)[m
-  [31m2776c23[m -[33m[m clean-up add_file() code [32m(7 months ago)[m
-  [31m48d7ed8[m -[33m[m move user() to HTTP::Tiny [32m(7 months ago)[m
-  [31m8bdfcf5[m -[33m[m move file() to HTTP::Tiny [32m(7 months ago)[m
-  [31m61a4379[m -[33m[m move info() to HTTP::Tiny [32m(7 months ago)[m
-  [31m0da1342[m -[33m[m use dzil plugins for module version [32m(7 months ago)[m
-  [31mc4431cb[m -[33m[m switch to Dist::Zilla [32m(7 months ago)[m
-===================================
-End of changes in the last 365 days
-===================================
+    bump version (should be last for today, hopefully) 
+
+  Change: 6abe6ec8dfeb20276109012eda09517160145a03
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2011-09-25 15:21:53 +0000
+
+    do not run POD::Coverage tests 
+
+  Change: 8f85d9e7a902ac8509c15ee7fb27509575fd2cb5
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2011-09-25 15:20:47 +0000
+
+    improve short and long descriptions 
+
+  Change: 4e600761c1605a0fb87502737d6ea624c1c16f49
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2011-09-25 15:20:47 +0000
+
+    minor tweaks to ::v3 POD 
+
+  Change: ef595c20ace01ee9cae54242ec2ef5f1e28e0cfb
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2011-09-25 15:12:05 +0000
+
+    remove debug cruft -.-'' 
+
+-----------------------------------------
+version 0.12 at 2011-09-25 13:02:45 +0000
+-----------------------------------------
+
+  Change: d6c3228b059bead785ae4a7af88e03e8424360d9
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2011-09-25 15:02:45 +0000
+
+    bump version 
+
+  Change: a1d3af59ec2b90b6b7edb5e923ed9dbc1fd46db2
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2011-09-25 14:56:07 +0000
+
+    make WWW::GitHub::Gist::v3 immutable 
+
+-----------------------------------------
+version 0.11 at 2011-09-24 14:55:46 +0000
+-----------------------------------------
+
+  Change: b4d4fe19f526b56347ec10b22b8c7f436695eefe
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2011-09-24 16:55:46 +0000
+
+    bump version 
+
+  Change: c671d8dfd929d5eddc4ddd548004749e2ca30252
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2011-09-24 16:54:42 +0000
+
+    use Any::Moose 
+
+  Change: 8dfd4525169b35626699f3a31506bf41c423b9e8
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2011-09-24 16:54:42 +0000
+
+    add support to v3 api 
+
+  Change: ace703beba3dc49297759e96fcd74757c5ae20a1
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2011-09-11 15:36:49 +0000
+
+    remove cruft tests 
+
+  Change: 9de41130bdb1d8e76ae36b506eb7457ce273a75c
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2011-04-25 18:43:32 +0000
+
+    use Author::ALEXBIO dzil bundle 
+
+=================================================
+Plus 10 releases after 2011-07-09 00:00:00 +0000.
+=================================================
