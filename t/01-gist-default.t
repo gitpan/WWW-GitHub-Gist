@@ -5,4 +5,4 @@ use WWW::GitHub::Gist;
 
 my $gist = WWW::GitHub::Gist->new;
 
-isa_ok($gist, 'WWW::GitHub::Gist::v2');
+isa_ok($gist, 'WWW::GitHub::Gist::v3');

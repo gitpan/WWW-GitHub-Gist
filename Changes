@@ -1,9 +1,25 @@
 ==================================================
-Changes from 2011-07-09 00:00:00 +0000 to present.
+Changes from 2011-08-06 00:00:00 +0000 to present.
 ==================================================
 
 -----------------------------------------
-version 0.14 at 2012-07-08 20:36:14 +0000
+version 0.15 at 2012-08-05 16:16:12 +0000
+-----------------------------------------
+
+  Change: 2248825f05f01c3fb92f76e46cd2057c09f3b65c
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-07-26 22:59:03 +0000
+
+    Gist.pm: v3 is now default, remove v2 (GitHub discontinued it) 
+
+  Change: 88b22ac45fc87d297fa2ed0050f8850a6eee6324
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-07-21 16:32:12 +0000
+
+    v3.pm: switch to using Moo instead of Any::Moose 
+
+-----------------------------------------
+version 0.14 at 2012-07-07 13:00:34 +0000
 -----------------------------------------
 
   Change: 57a52110814b826004fbfa49de36d9b222c954b3
@@ -103,5 +119,5 @@ version 0.11 at 2011-09-24 14:55:46 +0000
     use Author::ALEXBIO dzil bundle 
 
 =================================================
-Plus 10 releases after 2011-07-09 00:00:00 +0000.
+Plus 10 releases after 2011-08-06 00:00:00 +0000.
 =================================================

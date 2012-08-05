@@ -1,9 +1,9 @@
 package WWW::GitHub::Gist::v3;
 {
-  $WWW::GitHub::Gist::v3::VERSION = '0.14';
+  $WWW::GitHub::Gist::v3::VERSION = '0.15';
 }
 
-use Any::Moose;
+use Moo;
 
 use Carp;
 use JSON;
@@ -18,14 +18,13 @@ WWW::GitHub::Gist::v3 - Perl interface to the GitHub's pastebin service (v3)
 
 =head1 VERSION
 
-version 0.14
+version 0.15
 
 =cut
 
 has 'api_url' => (
-	isa => 'Str',
-	is  => 'ro',
-	default => 'https://api.github.com'
+	is      => 'ro',
+	default => sub { 'https://api.github.com' }
 );
 
 =head1 SYNOPSIS
@@ -84,7 +83,6 @@ Gist id.
 =cut
 
 has 'id'  => (
-	isa => 'Str',
 	is  => 'rw',
 );
 
@@ -95,7 +93,6 @@ GitHub username.
 =cut
 
 has 'user'  => (
-	isa => 'Str',
 	is  => 'rw',
 );
 
@@ -106,7 +103,6 @@ Authenticating user's password.
 =cut
 
 has 'password'  => (
-	isa => 'Str',
 	is  => 'rw',
 );
 
@@ -424,7 +420,7 @@ See http://dev.perl.org/licenses/ for more information.
 
 =cut
 
-no Any::Moose;
+no Moo;
 
 __PACKAGE__ -> meta -> make_immutable;
 

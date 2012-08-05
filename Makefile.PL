@@ -24,18 +24,16 @@ my %WriteMakefileArgs = (
   "LICENSE" => "perl",
   "NAME" => "WWW::GitHub::Gist",
   "PREREQ_PM" => {
-    "Any::Moose" => 0,
     "Carp" => 0,
     "HTTP::Tiny" => 0,
     "JSON" => 0,
     "MIME::Base64" => 0,
-    "URI::Escape" => 0,
+    "Moo" => 0,
     "base" => 0,
-    "constant" => 0,
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "0.14",
+  "VERSION" => "0.15",
   "test" => {
     "TESTS" => "t/*.t"
   }
