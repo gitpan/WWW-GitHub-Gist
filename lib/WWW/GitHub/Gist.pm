@@ -1,6 +1,6 @@
 package WWW::GitHub::Gist;
 {
-  $WWW::GitHub::Gist::VERSION = '0.15';
+  $WWW::GitHub::Gist::VERSION = '0.16';
 }
 
 use strict;
@@ -14,7 +14,7 @@ WWW::GitHub::Gist - Perl interface to the GitHub's pastebin service
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =head1 SYNOPSIS
 

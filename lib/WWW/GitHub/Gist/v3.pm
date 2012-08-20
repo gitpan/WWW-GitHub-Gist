@@ -1,7 +1,10 @@
 package WWW::GitHub::Gist::v3;
 {
-  $WWW::GitHub::Gist::v3::VERSION = '0.15';
+  $WWW::GitHub::Gist::v3::VERSION = '0.16';
 }
+
+use strict;
+use warnings;
 
 use Moo;
 
@@ -9,16 +12,13 @@ use Carp;
 use JSON;
 use HTTP::Tiny;
 
-use strict;
-use warnings;
-
 =head1 NAME
 
 WWW::GitHub::Gist::v3 - Perl interface to the GitHub's pastebin service (v3)
 
 =head1 VERSION
 
-version 0.15
+version 0.16
 
 =cut
 

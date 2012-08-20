@@ -25,10 +25,10 @@ requires:
   strict: 0
   warnings: 0
 resources:
-  bugtracker: https://github.com/AlexBio/p5-WWW-GitHub-Gist/issues
+  bugtracker: https://github.com/ghedo/p5-WWW-GitHub-Gist/issues
   homepage: http://metacpan.org/release/WWW-GitHub-Gist/
-  repository: git://github.com/AlexBio/p5-WWW-GitHub-Gist.git
-version: 0.15
+  repository: git://github.com/ghedo/p5-WWW-GitHub-Gist.git
+version: 0.16
 x_Dist_Zilla:
   plugins:
     -
@@ -150,7 +150,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::Clean
       name: '@Author::ALEXBIO/Clean'
-      version: 0.04
+      version: 0.06
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':InstallModules'
