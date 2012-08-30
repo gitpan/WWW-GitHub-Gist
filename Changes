@@ -1,9 +1,49 @@
 ==================================================
-Changes from 2011-08-21 00:00:00 +0000 to present.
+Changes from 2011-08-31 00:00:00 +0000 to present.
 ==================================================
 
 -----------------------------------------
-version 0.16 at 2012-08-20 11:13:25 +0000
+version 0.17 at 2012-08-30 15:18:45 +0000
+-----------------------------------------
+
+  Change: 1e9c1f34add3b4c923d00599dc2e1f9d88e237c0
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-08-30 17:17:53 +0000
+
+    dist.ini: skip Config::Identity::GitHub in prereqs 
+
+  Change: cbb792f85771801705fe03b17aa5ece86eb246e0
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-08-30 17:17:02 +0000
+
+    dist.ini: re-enable pod coverage tests 
+
+  Change: a22be23949668b04284d3a7f048efa02c9698fb7
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-08-30 17:17:02 +0000
+
+    Gist.pm: croak on missing parameters 
+
+  Change: 1309a19428da5e59c0b2c2347a157d5b58cf84de
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-08-30 17:17:01 +0000
+
+    t: add proper testing 
+
+  Change: 654162ed9b0d470ce8c49f044d83399b9b25c8fb
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-08-30 16:41:18 +0000
+
+    v3.pm: deprecate in favor of plain WWW::GitHub::Gist 
+
+  Change: ab6842fb22b16662ba123f1acd9ad20b89185681
+  Author: Alessandro Ghedini <al3xbio@gmail.com>
+  Date : 2012-08-23 15:27:01 +0000
+
+    v3.pm: allow anonymous gists (closes #2) 
+
+-----------------------------------------
+version 0.16 at 2012-08-20 11:13:13 +0000
 -----------------------------------------
 
   Change: f4932afc606b182218bbccf4a3cef7aaf4716b46
@@ -129,5 +169,5 @@ version 0.11 at 2011-09-24 14:55:46 +0000
     use Author::ALEXBIO dzil bundle 
 
 =================================================
-Plus 10 releases after 2011-08-21 00:00:00 +0000.
+Plus 10 releases after 2011-08-31 00:00:00 +0000.
 =================================================

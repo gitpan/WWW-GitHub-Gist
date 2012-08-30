@@ -9,7 +9,7 @@ dist.ini
 lib/WWW/GitHub/Gist.pm
 lib/WWW/GitHub/Gist/v3.pm
 t/00-compile.t
-t/01-gist-default.t
-t/01-gist-v3.t
+t/01-gist.t
 t/release-check-manifest.t
+t/release-pod-coverage.t
 t/release-pod-syntax.t
